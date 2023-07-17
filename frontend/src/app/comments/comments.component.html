@@ -1,0 +1,22 @@
+<div class="comments-container">
+  <button class="back-button" (click)="goToPostsPage()">Go Back to Posts</button>
+  <div class="comments-list" *ngIf="commentList.length > 0; else noComments">
+    <ul>
+      <li *ngFor="let comment of filteredComments" class="comment-item">
+        <div class="comment-user-info">
+          <strong>User ID:</strong> {{ comment.appuserid }}
+        </div>
+        <div class="comment-details">
+          <strong>Post ID:</strong> {{ comment.postid }} &nbsp;|&nbsp; <strong>Date:</strong> {{ comment.data | date:'yyyy-MM-dd HH:mm:ss'  }}
+        </div>
+        <div class="comment-body">
+          <strong>Body:</strong> {{ comment.body }}
+        </div>
+        
+      </li>
+    </ul>
+  </div>
+  <ng-template #noComments>
+    <p class="no-comments-message">No comments available.</p>
+  </ng-template>
+</div>

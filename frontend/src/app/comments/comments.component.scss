@@ -1,0 +1,69 @@
+.comments-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+.comments-list {
+  margin-top: 20px;
+}
+
+.comment-item {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.comment-user-info {
+  font-weight: bold;
+}
+
+.comment-details {
+  font-size: 14px;
+  color: #777;
+}
+
+.comment-body {
+  margin-top: 8px;
+}
+
+.no-comments-message {
+  color: #777;
+}
+
+/* Load Animation */
+.fadeInOut {
+  opacity: 0;
+}
+
+.fadeInOut.ng-enter,
+.fadeInOut.ng-leave,
+.fadeInOut.ng-void {
+  transition: opacity 0.5s;
+}
+
+.fadeInOut.ng-enter,
+.fadeInOut.ng-void {
+  opacity: 0;
+}
+
+.fadeInOut.ng-enter-active,
+.fadeInOut.ng-leave-active,
+.fadeInOut.ng-void {
+  opacity: 1;
+}

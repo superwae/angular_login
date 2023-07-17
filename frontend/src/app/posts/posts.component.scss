@@ -1,0 +1,76 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ddddd0; /* Set your desired background color */
+  font-family: Arial, sans-serif;
+}
+
+/* Rest of the CSS for the post-container and post elements as shown in the previous answer */
+
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post {
+  width: 80%;
+  max-width: 400px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  animation: fadeInUp 0.5s ease;
+}
+
+.post-content {
+  padding-right: 10px;
+}
+
+.post-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.post-body {
+  font-size: 16px;
+  color: #555;
+}
+
+.comment-button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.comment-button:hover {
+  background-color: #0056b3;
+}
+
+/* Filler content on the left and right of each post */
+.post::before,
+.post::after {
+  content: "";
+  flex: 1;
+  height: 20px;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
